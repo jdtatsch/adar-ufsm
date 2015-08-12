@@ -2,6 +2,8 @@
 Jônatan Tatsch  
 19-03-2015  
 
+
+
 - - -
 
 ![](figs/adar.png)
@@ -522,8 +524,8 @@ ls()
 
 ```
  [1] "a"       "abr"     "ago"     "dez"     "jan"     "jul"     "jun"    
- [8] "mar"     "may"     "ndias3"  "ndias4"  "nov"     "out"     "set"    
-[15] "tar"     "totdias" "x"       "y1"      "y2"      "y3"     
+ [8] "mar"     "may"     "ndias3"  "ndias4"  "nov"     "out"     "pcks"   
+[15] "set"     "tar"     "totdias" "x"       "y1"      "y2"      "y3"     
 ```
 
 Os objetos criados também estão disponíveis no painel **Environment** do RStudio.
@@ -693,9 +695,9 @@ ls()
  [1] "a"       "abr"     "ago"     "Apr"     "Aug"     "Dec"     "dez"    
  [8] "dia_1"   "Feb"     "i"       "jan"     "Jan"     "jul"     "Jul"    
 [15] "jun"     "Jun"     "mar"     "Mar"     "may"     "May"     "ndias3" 
-[22] "ndias4"  "nov"     "Nov"     "nums"    "Oct"     "out"     "Sep"    
-[29] "set"     "tar"     "totdias" "verão"   "x"       "y1"      "y2"     
-[36] "y3"     
+[22] "ndias4"  "nov"     "Nov"     "nums"    "Oct"     "out"     "pcks"   
+[29] "Sep"     "set"     "tar"     "totdias" "verão"   "x"       "y1"     
+[36] "y2"      "y3"     
 ```
 
 ```r
@@ -708,12 +710,13 @@ ls(all = TRUE)
  [5] "Aug"          "Dec"          "dez"          "dia_1"       
  [9] "Feb"          "i"            "jan"          "Jan"         
 [13] "jul"          "Jul"          "jun"          "Jun"         
-[17] "mar"          "Mar"          "may"          "May"         
-[21] "ndias3"       "ndias4"       "nov"          "Nov"         
-[25] "nums"         "Oct"          "out"          ".Random.seed"
-[29] "Sep"          "set"          "tar"          "totdias"     
-[33] "verão"        "x"            "y1"           ".y1"         
-[37] "y2"           ".y2"          "y3"          
+[17] ".Last"        "mar"          "Mar"          "may"         
+[21] "May"          "ndias3"       "ndias4"       "nov"         
+[25] "Nov"          "nums"         "Oct"          "out"         
+[29] "pcks"         ".Random.seed" "Sep"          "set"         
+[33] "tar"          "totdias"      "verão"        "x"           
+[37] "y1"           ".y1"          "y2"           ".y2"         
+[41] "y3"          
 ```
 
 ```r
@@ -739,8 +742,8 @@ ls()
  [1] "a"       "Dec"     "dez"     "dia_1"   "Feb"     "i"       "jan"    
  [8] "Jan"     "jul"     "Jul"     "jun"     "Jun"     "mar"     "Mar"    
 [15] "may"     "May"     "ndias3"  "ndias4"  "nov"     "Nov"     "nums"   
-[22] "Oct"     "out"     "Sep"     "set"     "tar"     "totdias" "verão"  
-[29] "x"       "y1"      "y2"      "y3"     
+[22] "Oct"     "out"     "pcks"    "Sep"     "set"     "tar"     "totdias"
+[29] "verão"   "x"       "y1"      "y2"      "y3"     
 ```
 
 ```r
@@ -875,10 +878,23 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+ [1] rasterVis_0.35      latticeExtra_0.6-26 RColorBrewer_1.1-2 
+ [4] lattice_0.20-33     raster_2.4-15       sp_1.1-1           
+ [7] dplyr_0.4.2         plyr_1.8.3          stringr_1.0.0      
+[10] lubridate_1.3.3     magrittr_1.5        R.utils_2.1.0      
+[13] R.oo_1.19.0         R.methodsS3_1.7.0   knitcitations_1.0.6
+[16] knitr_1.10.5       
+
 loaded via a namespace (and not attached):
- [1] magrittr_1.5    formatR_1.2     tools_3.2.1     htmltools_0.2.6
- [5] yaml_2.1.13     stringi_0.5-5   rmarkdown_0.7   knitr_1.10.5   
- [9] stringr_1.0.0   digest_0.6.8    evaluate_0.7   
+ [1] Rcpp_0.12.0       R6_2.1.0          bibtex_0.4.0     
+ [4] httr_1.0.0        tools_3.2.1       grid_3.2.1       
+ [7] parallel_3.2.1    DBI_0.3.1         htmltools_0.2.6  
+[10] assertthat_0.1    yaml_2.1.13       digest_0.6.8     
+[13] RJSONIO_1.3-0     RefManageR_0.8.63 formatR_1.2      
+[16] bitops_1.0-6      RCurl_1.95-4.7    memoise_0.2.1    
+[19] evaluate_0.7      rmarkdown_0.7     stringi_0.5-5    
+[22] XML_3.98-1.3      hexbin_1.27.0     zoo_1.7-12       
 ```
 
 As opções de configuração da sessão estão disponíveis através da função `options()`. Há diversas opções. Essas opções podem ser alteradas de acordo com a preferência do usuário.
@@ -937,6 +953,15 @@ $device.ask.default
 $digits
 [1] 7
 
+$dplyr.print_max
+[1] 20
+
+$dplyr.print_min
+[1] 10
+
+$dplyr.strict_sql
+[1] FALSE
+
 $dvipscmd
 [1] "dvips"
 
@@ -963,6 +988,12 @@ $help.try.all.packages
 
 $HTTPUserAgent
 [1] "R (3.2.1 x86_64-pc-linux-gnu x86_64 linux-gnu)"
+
+$httr_oauth_cache
+[1] NA
+
+$httr_oob_default
+[1] FALSE
 
 $internet.info
 [1] 2
@@ -1144,6 +1175,17 @@ help(log10)
 ?sample
 ```
 
+```
+Help on topic 'sample' was found in the following packages:
+
+  Package               Library
+  dplyr                 /home/hidrometeorologista/.R/libs
+  base                  /usr/lib/R/library
+
+
+Using the first match ...
+```
+
 Para procurar funções com algum termo de interesse use:
 
 
@@ -1168,8 +1210,10 @@ apropos("test")
 [27] "prop.trend.test"         "quade.test"             
 [29] "shapiro.test"            "testInheritedMethods"   
 [31] "testPlatformEquivalence" "testVirtual"            
-[33] "t.test"                  ".valueClassTest"        
-[35] "var.test"                "wilcox.test"            
+[33] "t.test"                  ".__T__writeStart:raster"
+[35] ".__T__writeStop:raster"  ".valueClassTest"        
+[37] "var.test"                "wilcox.test"            
+[39] "writeStart"              "writeStop"              
 ```
 
 ```r
@@ -1177,7 +1221,8 @@ apropos("help")
 ```
 
 ```
-[1] "help"         "help.request" "help.search"  "help.start"  
+[1] "help"               "help.request"       "help.search"       
+[4] "help.start"         "readRdHelp"         "readRdHelp.default"
 ```
 
 ```r
@@ -1185,9 +1230,12 @@ apropos("cor")
 ```
 
 ```
-[1] "cancor"             "cor"                "cor.test"          
-[4] "cov2cor"            ".__C__recordedplot" "Harman23.cor"      
-[7] "Harman74.cor"       "recordGraphics"     "recordPlot"        
+ [1] "cancor"                "cor"                  
+ [3] "corLocal"              "cor.test"             
+ [5] "cov2cor"               ".__C__recordedplot"   
+ [7] "Harman23.cor"          "Harman74.cor"         
+ [9] "record_as_cited"       "recordGraphics"       
+[11] "recordPlot"            ".__T__corLocal:raster"
 ```
 
 Outras funções de ajuda.
@@ -1288,10 +1336,23 @@ locale:
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+ [1] rasterVis_0.35      latticeExtra_0.6-26 RColorBrewer_1.1-2 
+ [4] lattice_0.20-33     raster_2.4-15       sp_1.1-1           
+ [7] dplyr_0.4.2         plyr_1.8.3          stringr_1.0.0      
+[10] lubridate_1.3.3     magrittr_1.5        R.utils_2.1.0      
+[13] R.oo_1.19.0         R.methodsS3_1.7.0   knitcitations_1.0.6
+[16] knitr_1.10.5       
+
 loaded via a namespace (and not attached):
- [1] magrittr_1.5    formatR_1.2     tools_3.2.1     htmltools_0.2.6
- [5] yaml_2.1.13     stringi_0.5-5   rmarkdown_0.7   knitr_1.10.5   
- [9] stringr_1.0.0   digest_0.6.8    evaluate_0.7   
+ [1] Rcpp_0.12.0       R6_2.1.0          bibtex_0.4.0     
+ [4] httr_1.0.0        tools_3.2.1       grid_3.2.1       
+ [7] parallel_3.2.1    DBI_0.3.1         htmltools_0.2.6  
+[10] assertthat_0.1    yaml_2.1.13       digest_0.6.8     
+[13] RJSONIO_1.3-0     RefManageR_0.8.63 formatR_1.2      
+[16] bitops_1.0-6      RCurl_1.95-4.7    memoise_0.2.1    
+[19] evaluate_0.7      rmarkdown_0.7     stringi_0.5-5    
+[22] XML_3.98-1.3      hexbin_1.27.0     zoo_1.7-12       
 ```
 
 #### Carregando o pacote
@@ -1437,12 +1498,22 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] sfsmisc_1.0-27
+ [1] sfsmisc_1.0-27      rasterVis_0.35      latticeExtra_0.6-26
+ [4] RColorBrewer_1.1-2  lattice_0.20-33     raster_2.4-15      
+ [7] sp_1.1-1            dplyr_0.4.2         plyr_1.8.3         
+[10] stringr_1.0.0       lubridate_1.3.3     magrittr_1.5       
+[13] R.utils_2.1.0       R.oo_1.19.0         R.methodsS3_1.7.0  
+[16] knitcitations_1.0.6 knitr_1.10.5       
 
 loaded via a namespace (and not attached):
- [1] magrittr_1.5    formatR_1.2     tools_3.2.1     htmltools_0.2.6
- [5] yaml_2.1.13     stringi_0.5-5   rmarkdown_0.7   knitr_1.10.5   
- [9] stringr_1.0.0   digest_0.6.8    evaluate_0.7   
+ [1] Rcpp_0.12.0       R6_2.1.0          bibtex_0.4.0     
+ [4] httr_1.0.0        tools_3.2.1       grid_3.2.1       
+ [7] parallel_3.2.1    DBI_0.3.1         htmltools_0.2.6  
+[10] assertthat_0.1    yaml_2.1.13       digest_0.6.8     
+[13] RJSONIO_1.3-0     RefManageR_0.8.63 formatR_1.2      
+[16] bitops_1.0-6      RCurl_1.95-4.7    memoise_0.2.1    
+[19] evaluate_0.7      rmarkdown_0.7     stringi_0.5-5    
+[22] XML_3.98-1.3      hexbin_1.27.0     zoo_1.7-12       
 ```
 
 O R é uma linguagem de código aberto e ao digitarmos o nome da função no terminal o código da função aparece. Podemos modificar, adaptar ou aperfeiçoar o código da função `eaxis()` da forma que desejarmos.
@@ -1479,7 +1550,7 @@ lines(x = tar,
 box()                  ## caixa em torno do gráfico
 ```
 
-![](3_RBasico_files/figure-html/chunk55-1.png) 
+![](figs/chunk55-1.png) 
 
 Mais detalhes da função em `?eaxis`.
 
@@ -1994,7 +2065,7 @@ data2
 ```
 
 ```
-[1] "2012-06-28 17:42:00 BRT"
+[1] "2012-06-28 17:42:00 GMT"
 ```
 
 ```r
@@ -2010,7 +2081,7 @@ as.numeric(data2)
 ```
 
 ```
-[1] 1340916120
+[1] 1340905320
 ```
 
 A manipulação de objetos da classe de datas e horários (`Date-time`) é mais versátil usando-se os pacotes `lubridate` e `chron`.
@@ -2970,7 +3041,7 @@ barplot(prec)
 box()
 ```
 
-![](3_RBasico_files/figure-html/chunk720-1.png) 
+![](figs/chunk720-1.png) 
 
 ```r
 ## vetor de temperatura do ar média mensal de um ano qualquer  
@@ -2988,7 +3059,7 @@ temp <- c(25, 23.2, 22.5, 21, 19, 17.6, 18, 19.7, 21.3, 22, 24, 26.8)
    plot(temp, type = "o")
 ```
 
-![](3_RBasico_files/figure-html/chunk720-2.png) 
+![](figs/chunk720-2.png) 
 
 Como selecionar o valor de chuva e temperatura só para janeiro?
 Vamos usar a seguinte sintaxe: `vetor[...elementos a serem selecionados...]`.
@@ -3225,6 +3296,16 @@ Dez Fev Jun
 ### Por comparação
 
 É possivel selecionar elementos de vetores com os **operadores relacionais** (Tabela 1).
+
+```
+## 
+## Attaching package: 'pander'
+## 
+## The following object is masked from 'package:R.utils':
+## 
+##     wrap
+```
+
 
 ----------------------------------
  Operador         Descrição       
@@ -3466,7 +3547,7 @@ points(horas[eh_dia_menor20], tar_hor[eh_dia_menor20], pch = 20, col = "red", ce
 abline(h = 20, col = "gray")
 ```
 
-![](3_RBasico_files/figure-html/chunk7292-1.png) 
+![](figs/chunk7292-1.png) 
 
 Vimos que a filtragem consiste em extrair elementos de um vetor que satisfaça uma (ou várias) condição(ões). Entretanto em alguns casos o interesse é na posição dentro do vetor  na qual a condição ocorre. Nós podemos fazer isso usando a função `which`:
 

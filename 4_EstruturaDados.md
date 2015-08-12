@@ -1310,7 +1310,7 @@ stemp <- c(t(temp_mat))
 plot(stemp, type = "o")
 ```
 
-![](4_EstruturaDados_files/figure-html/Chunk171-1.png) 
+![](figs/Chunk171-1.png) 
 
 ```r
 ## criar matriz com colunas temp e meses 1:12
@@ -1373,7 +1373,7 @@ plot(tempdat,
     )# end plot 
 ```
 
-![](4_EstruturaDados_files/figure-html/Chunk171-2.png) 
+![](figs/Chunk171-2.png) 
 
 ```r
 ## para entender a variação nas cores e símbolos usadas no gráfico
@@ -1799,14 +1799,14 @@ atemp[1,,]
 matplot(t(atemp[1, , ]), type = "l")
 ```
 
-![](4_EstruturaDados_files/figure-html/Chun221-1.png) 
+![](figs/Chun221-1.png) 
 
 ```r
 ## media zonal 
 boxplot(atemp[1, , ])
 ```
 
-![](4_EstruturaDados_files/figure-html/Chun221-2.png) 
+![](figs/Chun221-2.png) 
 
 ```r
 # para 2a faixa de longitude (-44), todas longitudes e tempos 
@@ -3977,7 +3977,7 @@ tar_k
 with(data = dados.df, expr = plot(tar + 273.15))
 ```
 
-![](4_EstruturaDados_files/figure-html/Chunk5310-1.png) 
+![](figs/Chunk5310-1.png) 
 
 O arquimento pode ser substituído por qualquer expressão ou conjunto de expressões que envolvam as variáveis do *data frame* de entrada.
 

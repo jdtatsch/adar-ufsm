@@ -1971,7 +1971,7 @@ levelplot(t(m),
           ylab = "y")
 ```
 
-![](5_EntradaDeDados_files/figure-html/Chunk6214-1.png) 
+![](figs/Chunk6214-1.png) 
 
 ```r
 ## para melhor visualização vamos substituir valores abaixo de 0.1 mm/dia por NA
@@ -1983,7 +1983,7 @@ levelplot(t(m),
           ylab = "y")
 ```
 
-![](5_EntradaDeDados_files/figure-html/Chunk6214-2.png) 
+![](figs/Chunk6214-2.png) 
 
 
 ## NetCDF (Network Common Data Form) 
@@ -2478,7 +2478,7 @@ str(tmp.slice)
 image.plot(lon, lat, tmp.slice, col = rev(brewer.pal(10, "RdBu")))
 ```
 
-![](5_EntradaDeDados_files/figure-html/Chunk634-1.png) 
+![](figs/Chunk634-1.png) 
 
 --------------------------
 
@@ -3579,7 +3579,7 @@ Formal class 'SpatialPolygonsDataFrame' [package "sp"] with 5 slots
 plot(bacias)
 ```
 
-![](5_EntradaDeDados_files/figure-html/Chunk730-1.png) 
+![](figs/Chunk730-1.png) 
 
 
   
@@ -3717,9 +3717,9 @@ file.info("data/chuva_df.RData")
 
 ```
                      size isdir mode               mtime
-data/chuva_df.RData 23031 FALSE  664 2015-08-12 03:58:31
+data/chuva_df.RData 23031 FALSE  664 2015-08-12 04:29:29
                                   ctime               atime  uid  gid
-data/chuva_df.RData 2015-08-12 03:58:31 2015-08-12 03:58:31 1000 1000
+data/chuva_df.RData 2015-08-12 04:29:29 2015-08-12 04:29:29 1000 1000
                                   uname              grname
 data/chuva_df.RData hidrometeorologista hidrometeorologista
 ```
@@ -3736,20 +3736,23 @@ dir()
 ```
 
 ```
- [1] "1_Rinstall.md"          "1_Rinstall.Rmd"        
- [3] "2_AmbienteR.html"       "2_AmbienteR.md"        
- [5] "2_AmbienteR.Rmd"        "3_RBasico.html"        
- [7] "3_RBasico.md"           "3_RBasico.Rmd"         
- [9] "4_EstruturaDados.html"  "4_EstruturaDados.md"   
-[11] "4_EstruturaDados.Rmd"   "5_EntradaDeDados_files"
-[13] "5_EntradaDeDados.Rmd"   "6_Funcoes.Rmd"         
-[15] "7_Graficos.Rmd"         "8_Datas.Rmd"           
-[17] "adar-ufsm.Rproj"        "apres_course.md"       
-[19] "apres_course.Rpres"     "DADOS"                 
-[21] "data"                   "figs"                  
-[23] "output"                 "plot_script1.pdf"      
-[25] "R"                      "rastreador1.db3"       
-[27] "README.md"             
+ [1] "1_Rinstall.html"       "1_Rinstall.md"        
+ [3] "1_Rinstall.Rmd"        "2_AmbienteR.html"     
+ [5] "2_AmbienteR.md"        "2_AmbienteR.Rmd"      
+ [7] "3_RBasico.html"        "3_RBasico.md"         
+ [9] "3_RBasico.Rmd"         "4_EstruturaDados.html"
+[11] "4_EstruturaDados.md"   "4_EstruturaDados.Rmd" 
+[13] "5_EntradaDeDados.html" "5_EntradaDeDados.md"  
+[15] "5_EntradaDeDados.Rmd"  "6_Funcoes.html"       
+[17] "6_Funcoes.md"          "6_Funcoes.Rmd"        
+[19] "7_Graficos_files"      "7_Graficos.html"      
+[21] "7_Graficos.md"         "7_Graficos.Rmd"       
+[23] "8_Datas.html"          "8_Datas.md"           
+[25] "8_Datas.Rmd"           "adar-ufsm.Rproj"      
+[27] "apres_course.md"       "apres_course.Rpres"   
+[29] "data"                  "figs"                 
+[31] "output"                "plot_script1.pdf"     
+[33] "R"                     "README.md"            
 ```
 
 ```r
@@ -3759,52 +3762,66 @@ list.dirs()
 
 ```
  [1] "."                                    
- [2] "./5_EntradaDeDados_files"             
- [3] "./5_EntradaDeDados_files/figure-html" 
- [4] "./DADOS"                              
- [5] "./data"                               
- [6] "./figs"                               
- [7] "./.git"                               
- [8] "./.git/branches"                      
- [9] "./.git/hooks"                         
-[10] "./.git/info"                          
-[11] "./.git/logs"                          
-[12] "./.git/logs/refs"                     
-[13] "./.git/logs/refs/heads"               
-[14] "./.git/logs/refs/remotes"             
-[15] "./.git/logs/refs/remotes/origin"      
-[16] "./.git/objects"                       
-[17] "./.git/objects/19"                    
-[18] "./.git/objects/42"                    
-[19] "./.git/objects/72"                    
-[20] "./.git/objects/73"                    
-[21] "./.git/objects/79"                    
-[22] "./.git/objects/7a"                    
-[23] "./.git/objects/a9"                    
-[24] "./.git/objects/be"                    
-[25] "./.git/objects/cd"                    
-[26] "./.git/objects/d1"                    
-[27] "./.git/objects/d3"                    
-[28] "./.git/objects/e9"                    
-[29] "./.git/objects/eb"                    
-[30] "./.git/objects/f6"                    
-[31] "./.git/objects/info"                  
-[32] "./.git/objects/pack"                  
-[33] "./.git/refs"                          
-[34] "./.git/refs/heads"                    
-[35] "./.git/refs/remotes"                  
-[36] "./.git/refs/remotes/origin"           
-[37] "./.git/refs/tags"                     
-[38] "./output"                             
-[39] "./output/sib2_papers"                 
-[40] "./R"                                  
-[41] "./.Rproj.user"                        
-[42] "./.Rproj.user/8C11DEC8"               
-[43] "./.Rproj.user/8C11DEC8/ctx"           
-[44] "./.Rproj.user/8C11DEC8/presentation"  
-[45] "./.Rproj.user/8C11DEC8/sdb"           
-[46] "./.Rproj.user/8C11DEC8/sdb/prop"      
-[47] "./.Rproj.user/8C11DEC8/sdb/s-4FFBD37F"
+ [2] "./7_Graficos_files"                   
+ [3] "./7_Graficos_files/figure-html"       
+ [4] "./data"                               
+ [5] "./figs"                               
+ [6] "./.git"                               
+ [7] "./.git/branches"                      
+ [8] "./.git/hooks"                         
+ [9] "./.git/info"                          
+[10] "./.git/logs"                          
+[11] "./.git/logs/refs"                     
+[12] "./.git/logs/refs/heads"               
+[13] "./.git/logs/refs/remotes"             
+[14] "./.git/logs/refs/remotes/origin"      
+[15] "./.git/objects"                       
+[16] "./.git/objects/19"                    
+[17] "./.git/objects/27"                    
+[18] "./.git/objects/2d"                    
+[19] "./.git/objects/36"                    
+[20] "./.git/objects/37"                    
+[21] "./.git/objects/42"                    
+[22] "./.git/objects/54"                    
+[23] "./.git/objects/68"                    
+[24] "./.git/objects/72"                    
+[25] "./.git/objects/73"                    
+[26] "./.git/objects/79"                    
+[27] "./.git/objects/7a"                    
+[28] "./.git/objects/7d"                    
+[29] "./.git/objects/81"                    
+[30] "./.git/objects/96"                    
+[31] "./.git/objects/a1"                    
+[32] "./.git/objects/a9"                    
+[33] "./.git/objects/bb"                    
+[34] "./.git/objects/be"                    
+[35] "./.git/objects/c5"                    
+[36] "./.git/objects/ca"                    
+[37] "./.git/objects/cd"                    
+[38] "./.git/objects/d1"                    
+[39] "./.git/objects/d3"                    
+[40] "./.git/objects/e9"                    
+[41] "./.git/objects/ea"                    
+[42] "./.git/objects/eb"                    
+[43] "./.git/objects/f6"                    
+[44] "./.git/objects/fc"                    
+[45] "./.git/objects/info"                  
+[46] "./.git/objects/pack"                  
+[47] "./.git/refs"                          
+[48] "./.git/refs/heads"                    
+[49] "./.git/refs/remotes"                  
+[50] "./.git/refs/remotes/origin"           
+[51] "./.git/refs/tags"                     
+[52] "./output"                             
+[53] "./output/sib2_papers"                 
+[54] "./R"                                  
+[55] "./.Rproj.user"                        
+[56] "./.Rproj.user/8C11DEC8"               
+[57] "./.Rproj.user/8C11DEC8/ctx"           
+[58] "./.Rproj.user/8C11DEC8/presentation"  
+[59] "./.Rproj.user/8C11DEC8/sdb"           
+[60] "./.Rproj.user/8C11DEC8/sdb/prop"      
+[61] "./.Rproj.user/8C11DEC8/sdb/s-4FFBD37F"
 ```
 
 ```r
@@ -3813,10 +3830,9 @@ list.dirs(recursive = FALSE)
 ```
 
 ```
-[1] "./5_EntradaDeDados_files" "./DADOS"                 
-[3] "./data"                   "./figs"                  
-[5] "./.git"                   "./output"                
-[7] "./R"                      "./.Rproj.user"           
+[1] "./7_Graficos_files" "./data"             "./figs"            
+[4] "./.git"             "./output"           "./R"               
+[7] "./.Rproj.user"     
 ```
 
 ```r
@@ -3826,52 +3842,66 @@ list.dirs(full.names = TRUE)
 
 ```
  [1] "."                                    
- [2] "./5_EntradaDeDados_files"             
- [3] "./5_EntradaDeDados_files/figure-html" 
- [4] "./DADOS"                              
- [5] "./data"                               
- [6] "./figs"                               
- [7] "./.git"                               
- [8] "./.git/branches"                      
- [9] "./.git/hooks"                         
-[10] "./.git/info"                          
-[11] "./.git/logs"                          
-[12] "./.git/logs/refs"                     
-[13] "./.git/logs/refs/heads"               
-[14] "./.git/logs/refs/remotes"             
-[15] "./.git/logs/refs/remotes/origin"      
-[16] "./.git/objects"                       
-[17] "./.git/objects/19"                    
-[18] "./.git/objects/42"                    
-[19] "./.git/objects/72"                    
-[20] "./.git/objects/73"                    
-[21] "./.git/objects/79"                    
-[22] "./.git/objects/7a"                    
-[23] "./.git/objects/a9"                    
-[24] "./.git/objects/be"                    
-[25] "./.git/objects/cd"                    
-[26] "./.git/objects/d1"                    
-[27] "./.git/objects/d3"                    
-[28] "./.git/objects/e9"                    
-[29] "./.git/objects/eb"                    
-[30] "./.git/objects/f6"                    
-[31] "./.git/objects/info"                  
-[32] "./.git/objects/pack"                  
-[33] "./.git/refs"                          
-[34] "./.git/refs/heads"                    
-[35] "./.git/refs/remotes"                  
-[36] "./.git/refs/remotes/origin"           
-[37] "./.git/refs/tags"                     
-[38] "./output"                             
-[39] "./output/sib2_papers"                 
-[40] "./R"                                  
-[41] "./.Rproj.user"                        
-[42] "./.Rproj.user/8C11DEC8"               
-[43] "./.Rproj.user/8C11DEC8/ctx"           
-[44] "./.Rproj.user/8C11DEC8/presentation"  
-[45] "./.Rproj.user/8C11DEC8/sdb"           
-[46] "./.Rproj.user/8C11DEC8/sdb/prop"      
-[47] "./.Rproj.user/8C11DEC8/sdb/s-4FFBD37F"
+ [2] "./7_Graficos_files"                   
+ [3] "./7_Graficos_files/figure-html"       
+ [4] "./data"                               
+ [5] "./figs"                               
+ [6] "./.git"                               
+ [7] "./.git/branches"                      
+ [8] "./.git/hooks"                         
+ [9] "./.git/info"                          
+[10] "./.git/logs"                          
+[11] "./.git/logs/refs"                     
+[12] "./.git/logs/refs/heads"               
+[13] "./.git/logs/refs/remotes"             
+[14] "./.git/logs/refs/remotes/origin"      
+[15] "./.git/objects"                       
+[16] "./.git/objects/19"                    
+[17] "./.git/objects/27"                    
+[18] "./.git/objects/2d"                    
+[19] "./.git/objects/36"                    
+[20] "./.git/objects/37"                    
+[21] "./.git/objects/42"                    
+[22] "./.git/objects/54"                    
+[23] "./.git/objects/68"                    
+[24] "./.git/objects/72"                    
+[25] "./.git/objects/73"                    
+[26] "./.git/objects/79"                    
+[27] "./.git/objects/7a"                    
+[28] "./.git/objects/7d"                    
+[29] "./.git/objects/81"                    
+[30] "./.git/objects/96"                    
+[31] "./.git/objects/a1"                    
+[32] "./.git/objects/a9"                    
+[33] "./.git/objects/bb"                    
+[34] "./.git/objects/be"                    
+[35] "./.git/objects/c5"                    
+[36] "./.git/objects/ca"                    
+[37] "./.git/objects/cd"                    
+[38] "./.git/objects/d1"                    
+[39] "./.git/objects/d3"                    
+[40] "./.git/objects/e9"                    
+[41] "./.git/objects/ea"                    
+[42] "./.git/objects/eb"                    
+[43] "./.git/objects/f6"                    
+[44] "./.git/objects/fc"                    
+[45] "./.git/objects/info"                  
+[46] "./.git/objects/pack"                  
+[47] "./.git/refs"                          
+[48] "./.git/refs/heads"                    
+[49] "./.git/refs/remotes"                  
+[50] "./.git/refs/remotes/origin"           
+[51] "./.git/refs/tags"                     
+[52] "./output"                             
+[53] "./output/sib2_papers"                 
+[54] "./R"                                  
+[55] "./.Rproj.user"                        
+[56] "./.Rproj.user/8C11DEC8"               
+[57] "./.Rproj.user/8C11DEC8/ctx"           
+[58] "./.Rproj.user/8C11DEC8/presentation"  
+[59] "./.Rproj.user/8C11DEC8/sdb"           
+[60] "./.Rproj.user/8C11DEC8/sdb/prop"      
+[61] "./.Rproj.user/8C11DEC8/sdb/s-4FFBD37F"
 ```
 
 ```r
@@ -3911,13 +3941,6 @@ Para ilustrar as funções de manipulação de arquivos e diretórios vamos real
 
 ```r
 dir.create("DADOS")
-```
-
-```
-Warning in dir.create("DADOS"): 'DADOS' already exists
-```
-
-```r
 dir.exists("DADOS")
 ```
 
@@ -3945,7 +3968,7 @@ file.copy(from = data_files, to = file.path("DADOS", data_files))
 ```
 
 ```
-[1] FALSE
+logical(0)
 ```
 
 + remover alguns arquivos do novo diretório;
@@ -3994,7 +4017,7 @@ tempdir()
 ```
 
 ```
-[1] "/tmp/RtmpDZ7XaK"
+[1] "/tmp/Rtmp42b84y"
 ```
 
 ```r
@@ -4002,7 +4025,7 @@ tempfile()
 ```
 
 ```
-[1] "/tmp/RtmpDZ7XaK/file63d31c5c90f5"
+[1] "/tmp/Rtmp42b84y/filee4768d2cb54"
 ```
 
 ```r
