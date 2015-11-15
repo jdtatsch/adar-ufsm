@@ -83,9 +83,8 @@ Precisamos incluir no arquivo `sources.list` o repositório da UFPR. Assim o ger
 
 Vamos adicionar o endereço do repositório da UFPR na última linha do arquivo `sources.list` através de alguns comandos do linux. Essa tarefa requer privilégios de superusuário, ou seja você precisa da senha de administrador do sistema. Vamos trocar de usuário comum para super usuário desde a terminal. 
 
-~~~~~~~
     $ sudo su
-~~~~~~~
+
 
 Vamos definir na terminal uma variável com o endereço do repositório.
 
@@ -93,9 +92,7 @@ Vamos definir na terminal uma variável com o endereço do repositório.
  
 Note que a variável `repos` é uma sequência de caracteres com as seguintes informações:
 
-~~~~~~~
     deb `linkRepositorioSelecionado`/bin/linux/ubuntu `versaoUbuntu`/
-~~~~~~~
 
 A versão de Ubuntu é dada pelo comando entre crases, pode ver a linha com o comando: `$repos`, verifique que a última palavra corresponde a um dos codenames de Ubuntu. Para acrescentar essa informação no final do arquivo `sources.list` digite:
 
