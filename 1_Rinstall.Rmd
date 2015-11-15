@@ -185,7 +185,7 @@ Agora você está pronto para começar a programar com *R* aproveitando as facil
 
 Outros links que podem ajudar na instalação do [R](https://cran.r-project.org/bin/linux/ubuntu/README) e do [RStudio](http://www.rstudio.com/ide/download/desktop).
 
-# Pacotes recomendados para apliacação em Meteorologia
+# Pacotes recomendados para aplicação em Meteorologia
 
 Existem vários pacotes de *R* amplamente utilizados por pesquisadores nos campos relacionados com a Meteorologia. Alguns exemplos são os pacotes `openair` (funções para análise estatístico de séries temporais), `hydroGOF` (funções para apliacação em hidrometeorologia), `raster` (funções para trabalhar com dados espaciais, semelhante a Sistemas de Informação Geográfica), entre outros.
 
@@ -214,4 +214,60 @@ system("sudo apt-get install mpich2 cmake mesa-common-dev libglu1-mesa-dev bwidg
 system("sudo apt-get install libgmp3-dev libmpfr-dev libmpfr4 libgsl0-dev ")
 system("sudo apt-get install libgdal1-dev libproj-dev")
 ```
+
+Na terminal de Linux execute os siguentes comandos que permitiram o uso da linguagem Java pelo sistema e o *R*.
+
+```.bash
+  sudo R CMD javareconf
+  wget -c http://www.rforge.net/src/contrib/rJava_0.9-8.tar.gz
+  R CMD INSTALL rJava_0.9-8.tar.gz
+```
+
+Na seção siguente serão instalados os pacotes do *R* mais importantes para a Meteorologia, alguns deles são utilizados no presente curso.
+
+```{r Chunck5, comment="",fig.align='center',highlight=TRUE,eval=FALSE,echo=FALSE}
+
+pacotes <- c("lattice",
+             "Rcpp",
+             "devtools",
+             "latticeExtra",
+             "sfsmisc",
+             "plyr",
+             "dplyr",
+             "tidyr",
+             "openair",
+             "fields",
+             "RColorBrewer",
+             "raster",
+             "rasterVis",
+             "magrittr",
+             "doBy",
+             "XLConnect",
+             "stringr",
+             "lubridate",
+             "reshape2",
+             "rgdal",
+             "ggplot2",
+             "sp",
+             "maptools",
+             "knitr",
+             "readxl",
+             "readr",
+             "roxygen2",
+             "httr")
+
+
+for (i in 1:length(pacotes)){
+  cat(pacotes[i])
+  install.packages(pacotes[i], dep = T)
+}
+
+install.packages(
+  'printr',
+  type = 'source',
+  repos = c('http://yihui.name/xran', 'http://cran.rstudio.com')
+)
+
+```
+
 
