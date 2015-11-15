@@ -73,7 +73,7 @@ print(sl[1:15], quote = F)
 ##sl[(length(sl)-10) : length(sl)]
 ```
 
-No trabalho com distribuições Linux devemos sempre preferir versões com soporte estável, nesse momento as versões de Soporte por Longo Tempo (LTS) são as 14.04 (abril de 2014, codename `trusty`) e a 15.04 (abril de 2015, codename `vivid`), você pode saber mais sobre as [versões de Ubuntu](http://releases.ubuntu.com/). Para saber qual é a versão do sistema operacional (SO) de sua PC digite na terminal linux o seguinte comando:
+No trabalho com distribuições Linux devemos sempre preferir versões com soporte estável, nesse momento as versões de Soporte por Longo Tempo (LTS) são as 12.04 (abril de 2012, codename `precise`), 14.04 (abril de 2014, codename `trusty`) e a 15.04 (abril de 2015, codename `vivid`), você pode saber mais sobre as [versões de Ubuntu](http://releases.ubuntu.com/). Para saber qual é a versão do sistema operacional (SO) de sua PC digite na terminal linux o seguinte comando:
 
 ~~~~~~~
 $ lsb_release --codename | cut -f2
