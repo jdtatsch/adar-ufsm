@@ -141,8 +141,7 @@ Para informar ao **R** onde procurar os pacotes que instalamos criamos um arquiv
 
     $ echo 'R_LIBS=`echo $HOME`/.R/libs/' >> `echo $HOME`/.Renviron
     
-Esse caminho fica então visível ao *R*, o que pode ser verificado pela função do R `.libPaths()` que pode ser executado na linha de comando do *R*.     
-
+Esse caminho fica então visível ao *R*, o que pode ser verificado executando a função `.libPaths()` desde a console de *R*.     
 
 ## Iniciando o *R*
 
