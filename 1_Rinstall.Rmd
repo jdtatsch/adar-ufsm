@@ -193,35 +193,36 @@ A continuação mostra-se linhas a executar desde a console de *R*, esses comand
 
 ```{r Chunck5, comment="",fig.align='center',highlight=TRUE,eval=FALSE,echo=FALSE}
 # PACOTES PARA TRABALHAR COM DADOS ESPACIAIS E OPERAÇÕES GIS
-# ACESSO A DADOS ON-LINE, NETCDF, BANCO DE DADOS
+# ACESSO A DADOS ON-LINE, NETCDF, BANCO DE DADOS, ETC.
 
-system("sudo apt-get install g++ gcc-4.8-doc libstdc++6-4.8-dbg lib32stdc++6-4.8-dbg") 
+  system("sudo apt-get install g++ gcc-4.8-doc libstdc++6-4.8-dbg lib32stdc++6-4.8-dbg") 
 ## Deve pedir uma senha de autorização de super usuário
-system("sudo apt-get install libx32stdc++6-4.8-dbg libstdc++5")
-system("sudo apt-get install build-essential lib32z1 lib32ncurses5 lib32bz2-1.0")
-system("sudo apt-get install libunwind8 gfortran htop")
-system("sudo apt-get install netcdf-bin proj-bin libproj-dev gdal-bin")
-system("sudo apt-get install libwxgtk-media3.0-0 libxml2-dev libcurl4-gnutls-dev")
-system("sudo apt-get install libpq-dev postgresql-9.3") 
-system("sudo apt-get install r-cran-xml r-cran-rcurl") 
-system("sudo apt-get install libcurl4-openssl-dev libboost-dev") 
-system("sudo apt-get install git git-doc git-el") 
-system("sudo apt-get install openjdk-7-*")
-system("sudo apt-get install libwxgtk-media3.0-dev tk-dev ")
-system("sudo apt-get install git git-doc git-el")
-system("sudo apt-get install python-gdal python3-gdal")
-system("sudo apt-get install mpich2 cmake mesa-common-dev libglu1-mesa-dev bwidget")
-system("sudo apt-get install libgmp3-dev libmpfr-dev libmpfr4 libgsl0-dev ")
-system("sudo apt-get install libgdal1-dev libproj-dev")
+
+  system("sudo apt-get install libx32stdc++6-4.8-dbg libstdc++5")
+  system("sudo apt-get install build-essential lib32z1 lib32ncurses5 lib32bz2-1.0")
+  system("sudo apt-get install libunwind8 gfortran htop")
+  system("sudo apt-get install netcdf-bin proj-bin libproj-dev gdal-bin")
+  system("sudo apt-get install libwxgtk-media3.0-0 libxml2-dev libcurl4-gnutls-dev")
+  system("sudo apt-get install libpq-dev postgresql-9.3") 
+  system("sudo apt-get install r-cran-xml r-cran-rcurl") 
+  system("sudo apt-get install libcurl4-openssl-dev libboost-dev") 
+  system("sudo apt-get install git git-doc git-el") 
+  system("sudo apt-get install openjdk-7-*")
+  system("sudo apt-get install libbz2-1.0 libbz2-dev libbz2-ocaml libbz2-ocaml-dev")
+  system("sudo apt-get install libpcre* ")
+  system("sudo apt-get install libwxgtk-media3.0-dev tk-dev ")
+  system("sudo apt-get install git git-doc git-el")
+  system("sudo apt-get install python-gdal python3-gdal")
+  system("sudo apt-get install mpich2 cmake mesa-common-dev libglu1-mesa-dev bwidget")
+  system("sudo apt-get install libgmp3-dev libmpfr-dev libmpfr4 libgsl0-dev lzma")
+  system("sudo apt-get install libgdal1-dev libproj-dev")
 ```
 
 Na terminal de Linux execute os siguentes comandos que permitiram o uso da linguagem Java pelo sistema e o *R*.
 
-```.bash
-  sudo R CMD javareconf
-  wget -c http://www.rforge.net/src/contrib/rJava_0.9-8.tar.gz
-  R CMD INSTALL rJava_0.9-8.tar.gz
-```
+    sudo R CMD javareconf
+    wget -c http://www.rforge.net/src/contrib/rJava_0.9-8.tar.gz
+    R CMD INSTALL rJava_0.9-8.tar.gz
 
 Na seção siguente serão instalados os pacotes do *R* mais importantes para a Meteorologia, alguns deles são utilizados no presente curso.
 
