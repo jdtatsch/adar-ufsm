@@ -194,29 +194,53 @@ A continuação mostra-se linhas a executar desde a console de *R*, esses comand
 ```{r Chunck5, comment="",fig.align='center',highlight=TRUE,eval=FALSE,echo=FALSE}
 # PACOTES PARA TRABALHAR COM DADOS ESPACIAIS E OPERAÇÕES GIS
 # ACESSO A DADOS ON-LINE, NETCDF, BANCO DE DADOS, ETC.
+# NESSA LISTA PODEM SER ANEXADOS OUTRAS LIBRERIAS SEGUNDO VOCÊ PRECISE
 
-  system("sudo apt-get install g++ gcc-4.8-doc libstdc++6-4.8-dbg lib32stdc++6-4.8-dbg") 
-## Deve pedir uma senha de autorização de super usuário
+libs <- c("g++
+          gcc-4.8-doc libstdc++6-4.8-dbg
+          lib32stdc++6-4.8-dbg 
+          libx32stdc++6-4.8-dbg
+          libstdc++5
+          build-essential
+          lib32z1 lib32ncurses5 lib32bz2-1.0
+          libunwind8
+          gfortran
+          htop
+          chromium-browser
+          webaccounts-chromium-extension unity-chromium-extension
+          netcdf-bin
+          proj-bin
+          libproj-dev
+          gdal-bin
+          libwxgtk-media3.0-0
+          libxml2-dev (XML package)
+          libcurl4-gnutls-dev (RCurl)
+          libpq-dev postgresql-9.3
+          r-cran-xml
+          libcurl4-openssl-dev
+          r-cran-rcurl
+          libboost-dev
+          git git-doc git-el
+          install openjdk-7-*
+          libwxgtk-media3.0-dev
+          tk-dev
+          python-gdal python3-gdal
+          mpich2 cmake
+          mesa-common-dev
+          libglu1-mesa-dev
+          bwidget
+          libgmp3-dev
+          libmpfr-dev libmpfr4
+          libgsl0-dev
+          libgdal1-dev
+          libproj-dev")
 
-  system("sudo apt-get install libx32stdc++6-4.8-dbg libstdc++5")
-  system("sudo apt-get install build-essential lib32z1 lib32ncurses5 lib32bz2-1.0")
-  system("sudo apt-get install libunwind8 gfortran htop")
-  system("sudo apt-get install netcdf-bin proj-bin libproj-dev gdal-bin")
-  system("sudo apt-get install libwxgtk-media3.0-0 libxml2-dev libcurl4-gnutls-dev")
-  system("sudo apt-get install libpq-dev postgresql-9.3") 
-  system("sudo apt-get install r-cran-xml r-cran-rcurl") 
-  system("sudo apt-get install libcurl4-openssl-dev libboost-dev") 
-  system("sudo apt-get install git git-doc git-el") 
-  system("sudo apt-get install openjdk-7-*")
-  system("sudo apt-get install libbz2-1.0 libbz2-dev libbz2-ocaml libbz2-ocaml-dev")
-  system("sudo apt-get install libpcre* ")
-  system("sudo apt-get install libwxgtk-media3.0-dev tk-dev ")
-  system("sudo apt-get install git git-doc git-el")
-  system("sudo apt-get install python-gdal python3-gdal")
-  system("sudo apt-get install mpich2 cmake mesa-common-dev libglu1-mesa-dev bwidget")
-  system("sudo apt-get install libgmp3-dev libmpfr-dev libmpfr4 libgsl0-dev lzma")
-  system("sudo apt-get install libgdal1-dev libproj-dev")
+write(libs, file = "~/lista_libs.txt")
 ```
+Na terminal de Linux execute o siguinte comando:
+
+    $ lista=`cat lista_libs.txt`
+    $ for i in $lista; do sudo apt-get -y install $i; done
 
 Na terminal de Linux execute os siguentes comandos que permitirão o uso da linguagem Java pelo sistema e o *R*.
 
@@ -271,4 +295,9 @@ install.packages(
 
 ```
 
+Outros pacotes de R para analises meteorológica.
+
+[]()
+[]()
+[]()
 
