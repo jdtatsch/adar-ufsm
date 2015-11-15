@@ -218,7 +218,7 @@ A continuação mostra-se linhas a executar desde a console de *R*, esses comand
   system("sudo apt-get install libgdal1-dev libproj-dev")
 ```
 
-Na terminal de Linux execute os siguentes comandos que permitiram o uso da linguagem Java pelo sistema e o *R*.
+Na terminal de Linux execute os siguentes comandos que permitirão o uso da linguagem Java pelo sistema e o *R*.
 
     sudo R CMD javareconf
     wget -c http://www.rforge.net/src/contrib/rJava_0.9-8.tar.gz
