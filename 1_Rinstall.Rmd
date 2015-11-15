@@ -65,7 +65,7 @@ A lista de repositórios do sistema é armazenada no arquivo `/etc/apt/sources.l
 $ cat /etc/apt/sources.list 
 ~~~~~~~
 
-Desde o *R* as primeiras linhas desse arquivo podem ser lidas com o comando em baixo:
+Desde o *R* as primeiras linhas desse arquivo podem ser lidas com o comando abaixo:
 
 ```{r Chunk1, message=FALSE, comment="",highlight=TRUE, prompt=FALSE,echo=FALSE,eval=TRUE}
 sl <- system("cat /etc/apt/sources.list", intern = T)
