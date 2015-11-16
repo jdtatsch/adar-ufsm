@@ -281,11 +281,7 @@ pacotes <- c("lattice",
              "roxygen2",
              "httr")
 
-
-for (i in 1:length(pacotes)){
-  cat(pacotes[i])
-  install.packages(pacotes[i], dep = T)
-}
+  install.packages(pacotes, dep = T)
 
 install.packages(
   'printr',
