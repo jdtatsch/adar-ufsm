@@ -390,9 +390,9 @@ Meteorological Observations
 
 [tempdisagg](https://cran.r-project.org/web/packages/tempdisagg/index.html)	Methods for Temporal Disaggregation and Interpolation of Time Series
 
-[timsac](https://cran.r-project.org/web/packages/timsac/index.html)	TIMe Series Analysis and Control package
+* [timsac](https://cran.r-project.org/web/packages/timsac/index.html)	TIMe Series Analysis and Control package
 
-[TSA](https://cran.r-project.org/web/packages/TSA/index.html)	Time Series Analysis
+* [TSA](https://cran.r-project.org/web/packages/TSA/index.html)	Time Series Analysis
 
 
 
