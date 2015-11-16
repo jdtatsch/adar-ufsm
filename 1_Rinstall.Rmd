@@ -239,7 +239,7 @@ write(libs, file = "~/lista_libs.txt")
 ```
 Na terminal de Linux execute o siguinte comando:
 
-    $ lista=`cat lista_libs.txt`
+    $ lista=`cat ~/lista_libs.txt`
     $ for i in $lista; do sudo apt-get -y install $i; done
 
 Na terminal de Linux execute os siguentes comandos que permitirão o uso da linguagem Java pelo sistema e o *R*.
